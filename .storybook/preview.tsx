@@ -1,20 +1,18 @@
-import type { Preview } from "@storybook/react";
-import * as React from "react";
+import type { Preview } from '@storybook/react'
+import * as React from 'react'
 
-import "../src/app/globals.css";
-import { Providers } from "../src/app/providers";
-
+import '../src/app/globals.css'
+import { Providers } from '../src/app/providers'
 
 const preview: Preview = {
   decorators: [
-    (Story) => 
+    (Story) => (
       <Providers>
         <Story />
       </Providers>
-    ,
+    ),
   ],
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -22,6 +20,6 @@ const preview: Preview = {
       },
     },
   },
-};
+}
 
-export default preview;
+export default preview
